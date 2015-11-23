@@ -39,6 +39,28 @@ function successPosition(position) {
 	$('#longtext').val(longitude);
 }
 
+var watchID = navigator.geolocation.watchPosition(
+ success, fail, locationOptions);
+function success(position) {
+ //do something with the position
+ var locationOptions = {
+ maximumAge: 10000,
+ timeout: 6000,
+ enableHighAccuracy: true
+	var longitude = position.coords.longitude;
+	//OK. Now we want to update the display with the correct values
+	$('#lattext').val(latitude);
+	$('#longtext').val(longitude);
+};
+
+}
+function fail(error) {
+ //do something with the error 
+ navigator.geolocation.clearWatch(watchID);
+ $('#time').val("Error getting data: " + error);
+
+}
+
 //called if the position is not obtained correctly
 function failPosition(error) {
 	//change time box to show updated message
