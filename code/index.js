@@ -31,10 +31,18 @@ function successPosition(position) {
 	//lets get some stuff out of the position object
 	var time = position.timestamp;
 	var latitude = position.coords.latitude;
-	var unixtime = new Date(position.timestamp);
-	var date = unixtime.toDateString();
+	var date = new Date(unix_timestamp*1000);
+// Hours part from the timestamp
+var hours = date.getHours();
+// Minutes part from the timestamp
+var minutes = "0" + date.getMinutes();
+// Seconds part from the timestamp
+var seconds = "0" + date.getSeconds();
+
+// Will display time in 10:30:23 format
+var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + unixtime);
+	$('#time').val("Recieved data at " + hours + minutes + seconds);
 	$('#lattext').val("I should contain the latitude data...");
 	
 }
