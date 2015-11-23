@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin name="org.apache.cordova.geolocation" spec="0.3.10" source="pgb" />
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.helloworld"
+        version   = "1.0.0">
+
+    <name>Location</name>
+
+    <description>
+        Location
+    </description>
+
+    <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
+        WBS Computing
+    </author>
+	<preference name="phonegap-version" value="3.1.0" />
+    <preference name="permissions"                value="none"/>   
+	
+	<access origin="*"/>
+</widget>
