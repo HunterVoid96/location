@@ -3,7 +3,7 @@ $(document).on('pageinit', function() {
 	
 	//set up listener for button click
 	$(turnon).on('click', getPosition);
-		$(turnon).on('click', turnoffPosition);
+		$(turnoff).on('click', turnoffPosition);
 	//change time box to show message
 	$('#time').val("Press the button to get location data");
 	
