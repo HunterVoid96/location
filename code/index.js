@@ -34,7 +34,7 @@ function successPosition(position) {
 	var unixtime = (new Date(1291656749000)).toUTCString();
 	
 	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + time);
+	$('#time').val("Recieved data at " + unixtime);
 	$('#lattext').val("I should contain the latitude data...");
 	
 }
