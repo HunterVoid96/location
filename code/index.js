@@ -40,9 +40,9 @@ var minutes = "0" + date.getMinutes();
 var seconds = "0" + date.getSeconds();
 
 // Will display time in 10:30:23 format
-var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+time = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + hours + minutes + seconds);
+	$('#time').val("Recieved data at " + time);
 	$('#lattext').val("I should contain the latitude data...");
 	
 }
